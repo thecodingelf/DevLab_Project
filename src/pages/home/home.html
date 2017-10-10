@@ -9,17 +9,23 @@
 
 <ion-content padding>
 
-  <ion-searchbar></ion-searchbar>
+  <ion-searchbar 
+  [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()">
+</ion-searchbar>
+
+  <div *ngIf="searching" class="spinner-container">
+    <ion-spinner></ion-spinner>
+</div>
 
   <ion-grid>
     <ion-row>
       <ion-col width-33>
-        <ion-card>
+        <ion-card *ngFor="let activity of activities">
           <ion-item>
             <ion-avatar item-start>
               <img src="img/cardimg1.jpg">
             </ion-avatar>
-            <h2>Protype</h2>
+            <h2>{{activity.activity}}</h2>
             <p>October 4, 2017</p>
           </ion-item>
           <ion-card-content>
@@ -31,7 +37,7 @@
           </button>
         </ion-card>
       </ion-col>
-      <ion-col width-33>
+<!-- <ion-col width-33>
         <ion-card>
           <ion-item>
             <ion-avatar item-start>
@@ -50,9 +56,6 @@
         </ion-card>
       </ion-col>
     </ion-row>
-  </ion-grid>
-
-  <ion-grid>
     <ion-row>
       <ion-col width-33>
         <ion-card>
@@ -91,8 +94,6 @@
         </ion-card>
       </ion-col>
     </ion-row>
-  </ion-grid>
-  <ion-grid>
     <ion-row>
       <ion-col width-33>
         <ion-card>
@@ -129,7 +130,7 @@
             <ion-icon name="ios-arrow-forward-outline"></ion-icon>
           </button>
         </ion-card>
-      </ion-col>
-    </ion-row>
+      </ion-col>-->
+    </ion-row> 
   </ion-grid>
 </ion-content>

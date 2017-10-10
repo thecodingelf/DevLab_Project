@@ -3,6 +3,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { BrowserModule } from '@angular/platform-browser';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { HttpModule} from '@angular/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -11,7 +12,8 @@ import { OtherPage } from '../pages/other/other';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { ChatPage } from '../pages/chat/chat';
-import { GuidePage } from '../pages/guide/guide';
+import { StoryCapsulePage } from '../pages/story-capsule/story-capsule';
+import { DataProvider } from '../providers/data/data';
 
 @NgModule({
   declarations: [
@@ -22,10 +24,11 @@ import { GuidePage } from '../pages/guide/guide';
     AboutPage,
     ContactPage,
     ChatPage,
-    GuidePage
+    StoryCapsulePage
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -37,8 +40,9 @@ import { GuidePage } from '../pages/guide/guide';
     AboutPage,
     ContactPage,
     ChatPage,
-    GuidePage
+    StoryCapsulePage
   ],
-  providers: [StatusBar, SplashScreen, { provide: ErrorHandler, useClass: IonicErrorHandler }]
+  providers: [StatusBar, SplashScreen, { provide: ErrorHandler, useClass: IonicErrorHandler },
+    DataProvider]
 })
 export class AppModule { }
