@@ -1,9 +1,16 @@
 page-home {
-    
+
        .spinner-container {
            width: 100%;
            text-align: center;
            padding: 10px;
        }
-    
+       ion-label {
+         white-space: inherit !important;
+       }
+  h2{
+    font-weight: 900!important;
+    color: rgba(0, 159, 62, 0.9)!important;
+  }
+
    }

@@ -9,7 +9,7 @@
 
 <ion-content padding>
 
-  <ion-searchbar 
+  <ion-searchbar
   [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()">
 </ion-searchbar>
 
@@ -22,16 +22,14 @@
       <ion-col width-33>
         <ion-card *ngFor="let activity of activities">
           <ion-item>
-            <ion-avatar item-start>
-              <img src="img/cardimg1.jpg">
-            </ion-avatar>
+            <ion-img width="300" height="250" src={{activity.image}}></ion-img>
             <h2>{{activity.activity}}</h2>
             <p>October 4, 2017</p>
           </ion-item>
           <ion-card-content>
-            This will become a nice prototype !! It's going to help a lot of parents !!
+            {{activity.text}}
           </ion-card-content>
-          <button ion-button clear item-end icon-right end>
+          <button ion-button clear item-end icon-right end (click)="openModal()">
             More
             <ion-icon name="ios-arrow-forward-outline"></ion-icon>
           </button>
@@ -131,6 +129,6 @@
           </button>
         </ion-card>
       </ion-col>-->
-    </ion-row> 
+    </ion-row>
   </ion-grid>
 </ion-content>

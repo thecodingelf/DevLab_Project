@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
+import { SubhomePage } from '../pages/subhome/subhome';
 import { OtherPage } from '../pages/other/other';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -21,6 +22,7 @@ import { DataProvider } from '../providers/data/data';
     TabsPage,
     OtherPage,
     HomePage,
+    SubhomePage,
     AboutPage,
     ContactPage,
     ChatPage,
@@ -37,6 +39,7 @@ import { DataProvider } from '../providers/data/data';
     TabsPage,
     OtherPage,
     HomePage,
+    SubhomePage,
     AboutPage,
     ContactPage,
     ChatPage,
