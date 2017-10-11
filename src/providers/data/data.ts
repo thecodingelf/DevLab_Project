@@ -74,7 +74,7 @@ export class DataProvider {
           instructions: "",
           tools: ""
         },
-        keywords: "camping, camp, summer, spring, autumn, fall, diy, hacks, hack, outdoor"
+        keywords: "camping, camp, summer, spring, autumn, fall, diy, hacks, hack, outdoor, tip, tips"
       }
 
 
