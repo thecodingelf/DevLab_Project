@@ -22,14 +22,14 @@
       <ion-col width-33>
         <ion-card *ngFor="let activity of activities">
           <ion-item>
-            <ion-img width="300" height="250" src={{activity.image}}></ion-img>
+           <ion-img src={{activity.image}}></ion-img>
             <h2>{{activity.activity}}</h2>
-            <p>October 4, 2017</p>
+            <ion-badge color="twitter">{{activity.content.age}}</ion-badge>
           </ion-item>
           <ion-card-content>
             {{activity.text}}
           </ion-card-content>
-          <button ion-button clear item-end icon-right end (click)="openModal()">
+          <button ion-button clear item-end icon-right end (click)="openModal(activity.id)">
             More
             <ion-icon name="ios-arrow-forward-outline"></ion-icon>
           </button>

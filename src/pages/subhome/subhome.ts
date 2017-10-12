@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { DataProvider } from '../../providers/data/data';
 import 'rxjs/add/operator/debounceTime';
 
@@ -9,14 +9,16 @@ import 'rxjs/add/operator/debounceTime';
 selector: 'page-subhome',
 templateUrl: 'subhome.html',
 })
+
 export class SubhomePage {
-    activities: any;
+    activities: any=0;
 
-    constructor(public navCtrl: NavController, public dataService: DataProvider, public navParams: NavParams) {
-    }
+    constructor(public navCtrl: NavController,
+                public dataService: DataProvider,
+                public navParams: NavParams) {
 
-    ionViewDidLoad() {
-      console.log('ionViewDidLoad SubhomePage');
-    }
-
+      this.dataService.getByID(this.navParams.get('id')).then(result => {
+      this.activities = result;
+    });
+  }
 }

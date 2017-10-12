@@ -17,17 +17,19 @@ export class HomePage {
   searchControl: FormControl;
   activities: any;
   searching: any = false;
-  navCtrl: NavController;
-  modalCtrl: ModalController;
+  //navCtrl: NavController;
+  //modalCtrl: ModalController;
 
   constructor(public navCtrl: NavController, public dataService: DataProvider, public modalCtrl: ModalController) {
     this.searchControl = new FormControl();
+    this.dataService.loadAll().then(result => {
+            this.activities =  result;
+        });
   }
-  openModal() {
-    let activities = activities;
-    let myModal = this.modalCtrl.create(SubhomePage, activities);
-    myModal.present();
+  openModal(id) {
+    this.navCtrl.push(SubhomePage, {id: id});
   }
+
   ionViewDidLoad() {
 
     this.setFilteredItems();
