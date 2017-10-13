@@ -9,11 +9,11 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { OtherPage } from '../pages/other/other';
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { ChatPage } from '../pages/chat/chat';
+import { ToDoPage } from '../pages/to-do/to-do';
+import { SubHomePage } from '../pages/sub-home/sub-home';
 import { StoryCapsulePage } from '../pages/story-capsule/story-capsule';
-import { DataProvider } from '../providers/data/data';
+import { DataProvider } from '../providers/data/activities-data';
+import { IonicImageViewerModule } from 'ionic-img-viewer';
 
 @NgModule({
   declarations: [
@@ -21,15 +21,15 @@ import { DataProvider } from '../providers/data/data';
     TabsPage,
     OtherPage,
     HomePage,
-    AboutPage,
-    ContactPage,
-    ChatPage,
+    SubHomePage,
+    ToDoPage,
     StoryCapsulePage
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicImageViewerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -37,9 +37,8 @@ import { DataProvider } from '../providers/data/data';
     TabsPage,
     OtherPage,
     HomePage,
-    AboutPage,
-    ContactPage,
-    ChatPage,
+    SubHomePage,
+    ToDoPage,
     StoryCapsulePage
   ],
   providers: [StatusBar, SplashScreen, { provide: ErrorHandler, useClass: IonicErrorHandler },

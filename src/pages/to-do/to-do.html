@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Activities To-Do
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-list-header>
+      Activities
+    </ion-list-header>
+
+    <ion-item *ngFor="let todo of todos">
+      <ion-label>{{todo.activity}}</ion-label>
+      <ion-checkbox color="secondary" checked="false"></ion-checkbox>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button item-end icon-right end>
+    Add new activity
+    <ion-icon name="add-circle"></ion-icon>
+  </button>
+
+</ion-content>
