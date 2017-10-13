@@ -1,3 +1,29 @@
 page-story-capsule {
+  ion-slide.swiper-slide {
+        left: 25%;
+    }
+  ion-note{
+    color: gray !important;
+  }
+  ion-fab[top][edge] {
+    top: 0;
+  }
+  h4{
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    text-align: left;
+    font-weight: 900 !important;
+    color: MediumSeaGreen;
+  }
+    .slide-zoom {
+        background: #e6e6e6;
+    }
+
+    .thumb-img {
+        padding: 10px;
+    }
+    .social-cards ion-col {
+      padding: 0;
+    }
 
 }

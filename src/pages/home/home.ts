@@ -12,7 +12,7 @@ import 'rxjs/add/operator/debounceTime';
 })
 
 export class HomePage {
-
+  hinh: any;
   searchTerm: string = '';
   searchControl: FormControl;
   activities: any;

@@ -15,6 +15,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { ChatPage } from '../pages/chat/chat';
 import { StoryCapsulePage } from '../pages/story-capsule/story-capsule';
 import { DataProvider } from '../providers/data/data';
+import { IonicImageViewerModule } from 'ionic-img-viewer';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DataProvider } from '../providers/data/data';
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicImageViewerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

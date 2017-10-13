@@ -22,7 +22,7 @@
       <ion-col width-33>
         <ion-card *ngFor="let activity of activities">
           <ion-item>
-           <ion-img src={{activity.image}}></ion-img>
+           <img src={{activity.image}}/>
             <h2>{{activity.activity}}</h2>
             <ion-badge color="twitter">{{activity.content.age}}</ion-badge>
           </ion-item>

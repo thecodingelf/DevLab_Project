@@ -8,8 +8,11 @@ export class DataProvider {
 
   activities: any;
 
+
   constructor(public http: HttpModule) {
     console.log('Hello DataProvider Provider');
+
+
 
     this.activities = [
       {
