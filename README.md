@@ -14,6 +14,6 @@ Then, to run it, cd into `(where you clone or unzipped the repository)` and run:
 
 ```bash
 $ ionic serve (If you want to run it in browser)
-$ ionic cordova platform add ios
+$ ionic cordova run android --device
 $ ionic cordova run ios
 ```
