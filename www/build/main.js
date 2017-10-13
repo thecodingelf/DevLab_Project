@@ -98,46 +98,6 @@ SubHomePage = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StoryCapsulePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var StoryCapsulePage = (function () {
-    function StoryCapsulePage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '7.jpg'];
-    }
-    StoryCapsulePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad StoryCapsulePage');
-    };
-    return StoryCapsulePage;
-}());
-StoryCapsulePage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-story-capsule',template:/*ion-inline-start:"C:\Users\Jukka\Desktop\DevLab\Parents\src\pages\story-capsule\story-capsule.html"*/'<!-- <ion-header>\n\n  <ion-navbar>\n    <ion-title>story-capsule</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding> \n\n    <ion-card *ngFor="let story of stories">\n        <ion-item>\n            <img src="img/cardimg1.jpg">\n          <h2>Me</h2>\n          <p>{{story.date}}</p>\n        </ion-item>\n        <ion-card-content>\n          {{story.description}}\n        </ion-card-content>\n        <button ion-button clear item-end icon-right end>\n          More\n          <ion-icon name="ios-arrow-forward-outline"></ion-icon>\n        </button>\n      </ion-card>\n\n</ion-content> -->\n\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>story-capsule</ion-title>\n    <ion-fab top right edge>\n      <button ion-fab color="secondary" mini>\n        <ion-icon name="add" (click)="Add()"></ion-icon>\n      </button>\n    </ion-fab>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content class="cards-bg social-cards">\n\n  <ion-item>\n    <h4>Recently uploaded</h4>\n    <ion-slides class="image-slider" loop="true" slidesPerView="2">\n      <ion-slide *ngFor="let img of images">\n        <img src="img/{{img}}" class="thumb-img" imageViewer/>\n      </ion-slide>\n    </ion-slides>\n  </ion-item>\n\n  <ion-card>\n\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="img/3.jpg">\n      </ion-avatar>\n      <h2>Bampás</h2>\n      <p>Taken time: June 28, 1990</p>\n    </ion-item>\n\n    <img src="img/6.jpg">\n\n    <ion-card-content>\n      <p>Daddy story: Hey kids, look at your awesome teen dad !!!!</p>\n    </ion-card-content>\n\n    <ion-row>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'thumbs-up\'></ion-icon>\n          46 Likes\n        </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'text\'></ion-icon>\n          66 Comments\n        </button>\n      </ion-col>\n      <ion-col align-self-center text-center>\n        <ion-note>\n          2d ago\n        </ion-note>\n      </ion-col>\n    </ion-row>\n\n  </ion-card>\n\n  <ion-card>\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="img/3.jpg">\n      </ion-avatar>\n      <h2>Grandmom</h2>\n      <p>Time taken: November 5, 1955</p>\n    </ion-item>\n\n    <img src="img/3.jpg">\n\n    <ion-card-content>\n      <p>Grandmom story here: orem ipsum dolor sit amet.</p>\n    </ion-card-content>\n\n    <ion-row>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'thumbs-up\'></ion-icon>\n          12 Likes\n        </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'text\'></ion-icon>\n          4 Comments\n        </button>\n      </ion-col>\n      <ion-col align-self-center text-center>\n        <ion-note>\n          11h ago\n        </ion-note>\n      </ion-col>\n    </ion-row>\n\n  </ion-card>\n\n\n  <ion-card>\n\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="img/4.jpg">\n      </ion-avatar>\n      <h2>Grandpa</h2>\n      <p>Time taken: October 10, 2015</p>\n    </ion-item>\n\n    <img src="img/5.jpg">\n\n    <ion-card-content>\n      <p>Grandpa story: orem ipsum dolor sit amet, adhuc recteque gubergren at.</p>\n    </ion-card-content>\n\n    <ion-row>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'thumbs-up\'></ion-icon>\n          30 Likes\n        </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'text\'></ion-icon>\n          64 Comments\n        </button>\n      </ion-col>\n      <ion-col align-self-center text-center>\n        <ion-note>\n          3w ago\n        </ion-note>\n      </ion-col>\n    </ion-row>\n\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Jukka\Desktop\DevLab\Parents\src\pages\story-capsule\story-capsule.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */]])
-], StoryCapsulePage);
-
-//# sourceMappingURL=story-capsule.js.map
-
-/***/ }),
-
-/***/ 107:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ToDoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
@@ -195,6 +155,46 @@ ToDoPage = __decorate([
 
 /***/ }),
 
+/***/ 107:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StoryCapsulePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var StoryCapsulePage = (function () {
+    function StoryCapsulePage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '7.jpg'];
+    }
+    StoryCapsulePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad StoryCapsulePage');
+    };
+    return StoryCapsulePage;
+}());
+StoryCapsulePage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-story-capsule',template:/*ion-inline-start:"C:\Users\Jukka\Desktop\DevLab\Parents\src\pages\story-capsule\story-capsule.html"*/'<!-- <ion-header>\n\n  <ion-navbar>\n    <ion-title>story-capsule</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding> \n\n    <ion-card *ngFor="let story of stories">\n        <ion-item>\n            <img src="img/cardimg1.jpg">\n          <h2>Me</h2>\n          <p>{{story.date}}</p>\n        </ion-item>\n        <ion-card-content>\n          {{story.description}}\n        </ion-card-content>\n        <button ion-button clear item-end icon-right end>\n          More\n          <ion-icon name="ios-arrow-forward-outline"></ion-icon>\n        </button>\n      </ion-card>\n\n</ion-content> -->\n\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>story-capsule</ion-title>\n    <ion-fab top right edge>\n      <button ion-fab color="secondary" mini>\n        <ion-icon name="add" (click)="Add()"></ion-icon>\n      </button>\n    </ion-fab>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content class="cards-bg social-cards">\n\n  <ion-item>\n    <h4>Recently uploaded</h4>\n    <ion-slides class="image-slider" loop="true" slidesPerView="2">\n      <ion-slide *ngFor="let img of images">\n        <img src="img/{{img}}" class="thumb-img" imageViewer/>\n      </ion-slide>\n    </ion-slides>\n  </ion-item>\n\n  <ion-card>\n\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="img/3.jpg">\n      </ion-avatar>\n      <h2>Bampás</h2>\n      <p>Taken time: June 28, 1990</p>\n    </ion-item>\n\n    <img src="img/6.jpg">\n\n    <ion-card-content>\n      <p>Daddy story: Hey kids, look at your awesome teen dad !!!!</p>\n    </ion-card-content>\n\n    <ion-row>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'thumbs-up\'></ion-icon>\n          46 Likes\n        </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'text\'></ion-icon>\n          66 Comments\n        </button>\n      </ion-col>\n      <ion-col align-self-center text-center>\n        <ion-note>\n          2d ago\n        </ion-note>\n      </ion-col>\n    </ion-row>\n\n  </ion-card>\n\n  <ion-card>\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="img/3.jpg">\n      </ion-avatar>\n      <h2>Grandmom</h2>\n      <p>Time taken: November 5, 1955</p>\n    </ion-item>\n\n    <img src="img/3.jpg">\n\n    <ion-card-content>\n      <p>Grandmom story here: orem ipsum dolor sit amet.</p>\n    </ion-card-content>\n\n    <ion-row>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'thumbs-up\'></ion-icon>\n          12 Likes\n        </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'text\'></ion-icon>\n          4 Comments\n        </button>\n      </ion-col>\n      <ion-col align-self-center text-center>\n        <ion-note>\n          11h ago\n        </ion-note>\n      </ion-col>\n    </ion-row>\n\n  </ion-card>\n\n\n  <ion-card>\n\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="img/4.jpg">\n      </ion-avatar>\n      <h2>Grandpa</h2>\n      <p>Time taken: October 10, 2015</p>\n    </ion-item>\n\n    <img src="img/5.jpg">\n\n    <ion-card-content>\n      <p>Grandpa story: orem ipsum dolor sit amet, adhuc recteque gubergren at.</p>\n    </ion-card-content>\n\n    <ion-row>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'thumbs-up\'></ion-icon>\n          30 Likes\n        </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button color="primary" clear small icon-start>\n          <ion-icon name=\'text\'></ion-icon>\n          64 Comments\n        </button>\n      </ion-col>\n      <ion-col align-self-center text-center>\n        <ion-note>\n          3w ago\n        </ion-note>\n      </ion-col>\n    </ion-row>\n\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Jukka\Desktop\DevLab\Parents\src\pages\story-capsule\story-capsule.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */]])
+], StoryCapsulePage);
+
+//# sourceMappingURL=story-capsule.js.map
+
+/***/ }),
+
 /***/ 117:
 /***/ (function(module, exports) {
 
@@ -217,15 +217,15 @@ webpackEmptyAsyncContext.id = 117;
 
 var map = {
 	"../pages/about/about.module": [
-		292,
+		291,
 		0
 	],
 	"../pages/other/other.module": [
-		291,
+		292,
 		4
 	],
 	"../pages/story-capsule/story-capsule.module": [
-		294,
+		295,
 		3
 	],
 	"../pages/sub-home/sub-home.module": [
@@ -233,7 +233,7 @@ var map = {
 		2
 	],
 	"../pages/to-do/to-do.module": [
-		295,
+		294,
 		1
 	]
 };
@@ -260,8 +260,8 @@ module.exports = webpackAsyncContext;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_home__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__to_do_to_do__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__story_capsule_story_capsule__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__to_do_to_do__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__story_capsule_story_capsule__ = __webpack_require__(107);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -395,9 +395,9 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_tabs_tabs__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_other_other__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_to_do_to_do__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_to_do_to_do__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_sub_home_sub_home__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_story_capsule_story_capsule__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_story_capsule_story_capsule__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_data_activities_data__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ionic_img_viewer__ = __webpack_require__(281);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -442,11 +442,11 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
                 links: [
-                    { loadChildren: '../pages/other/other.module#OtherPageModule', name: 'OtherPage', segment: 'other', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/about/about.module#AboutPageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/other/other.module#OtherPageModule', name: 'OtherPage', segment: 'other', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/sub-home/sub-home.module#SubHomePageModule', name: 'SubHomePage', segment: 'sub-home', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/story-capsule/story-capsule.module#StoryCapsulePageModule', name: 'StoryCapsulePage', segment: 'story-capsule', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/to-do/to-do.module#ToDoPageModule', name: 'ToDoPage', segment: 'to-do', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/to-do/to-do.module#ToDoPageModule', name: 'ToDoPage', segment: 'to-do', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/story-capsule/story-capsule.module#StoryCapsulePageModule', name: 'StoryCapsulePage', segment: 'story-capsule', priority: 'low', defaultHistory: [] }
                 ]
             }),
             __WEBPACK_IMPORTED_MODULE_14_ionic_img_viewer__["a" /* IonicImageViewerModule */]
@@ -601,7 +601,7 @@ var DataProvider = (function () {
                 text: "Do you have the winter blues? Bust your cabin-fever by having a little fun with snow. Create some wintry crafts and make some goodies that incorporate that fluffy white stuff we all love this time of year.",
                 content: {
                     title: "Snow craft",
-                    img: "img/unknown.JPG",
+                    img: "img/no_image.jpeg",
                     age: "age range",
                     des: "GOAL: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
                     instructions: "Instruction> Lorem ipsum dolor sit amet, ad ius velit homero, nonumy aliquam eam ad, cu ius iusto saepe oratio. Ad mel audiam dolorem dolores, vim ex quas ferri assueverit, at sit agam atqui graece. Eu quando atomorum assueverit nam, usu malorum assentior at. Similique deterruisset ne mea, no possim vocent audiam pro. Nec id purto dissentias cotidieque.",
@@ -616,7 +616,7 @@ var DataProvider = (function () {
                 text: "Find out the collection of simple DIY camping hacks extremely useful in making your outdoors experience less expensive and more enjoyable. Try them and watch your fellow campers turn green with envy.",
                 content: {
                     title: "DIY Camping Hacks",
-                    img: "img/unknown.JPG",
+                    img: "img/no_image.jpeg",
                     age: "age range",
                     des: "GOAL: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
                     instructions: "Instruction> Lorem ipsum dolor sit amet, ad ius velit homero, nonumy aliquam eam ad, cu ius iusto saepe oratio. Ad mel audiam dolorem dolores, vim ex quas ferri assueverit, at sit agam atqui graece. Eu quando atomorum assueverit nam, usu malorum assentior at. Similique deterruisset ne mea, no possim vocent audiam pro. Nec id purto dissentias cotidieque.",
@@ -631,7 +631,7 @@ var DataProvider = (function () {
                 text: "A hit of the neighborhood, turn the backyard into your very own bowling alley with our recycled bottle bowling craft! With a little paint and some rescued bottles, you’ll soon have an easy DIY game everyone in the family will love.",
                 content: {
                     title: "Bowling time",
-                    img: "img/unknown.JPG",
+                    img: "img/no_image.jpeg",
                     age: "age range",
                     des: "GOAL: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
                     instructions: "Instruction> Lorem ipsum dolor sit amet, ad ius velit homero, nonumy aliquam eam ad, cu ius iusto saepe oratio. Ad mel audiam dolorem dolores, vim ex quas ferri assueverit, at sit agam atqui graece. Eu quando atomorum assueverit nam, usu malorum assentior at. Similique deterruisset ne mea, no possim vocent audiam pro. Nec id purto dissentias cotidieque.",
@@ -646,7 +646,7 @@ var DataProvider = (function () {
                 text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                 content: {
                     title: "Lorem Ipsum",
-                    img: "img/unknown.JPG",
+                    img: "img/no_image.jpeg",
                     age: "age range",
                     des: "GOAL: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
                     instructions: "Instruction> Lorem ipsum dolor sit amet, ad ius velit homero, nonumy aliquam eam ad, cu ius iusto saepe oratio. Ad mel audiam dolorem dolores, vim ex quas ferri assueverit, at sit agam atqui graece. Eu quando atomorum assueverit nam, usu malorum assentior at. Similique deterruisset ne mea, no possim vocent audiam pro. Nec id purto dissentias cotidieque.",
@@ -656,12 +656,12 @@ var DataProvider = (function () {
             }
         ];
     }
-    //loadAll() method which simply returns this activities array variable as promise.
+    // loadAll() method which simply returns this activities array variable as promise.
     DataProvider.prototype.loadAll = function () {
         return Promise.resolve(this.activities);
     };
     ;
-    //return the matching id’s object as promise.
+    // return the matching id’s object as promise.
     DataProvider.prototype.getByID = function (id) {
         for (var i = 0; i < (this.activities).length; i++) {
             if (this.activities[i].id == id) {
@@ -670,6 +670,7 @@ var DataProvider = (function () {
         }
     };
     ;
+    // filter search results by keyword.
     DataProvider.prototype.filterItems = function (searchTerm) {
         return this.activities.filter(function (activity) {
             return activity.keywords.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;

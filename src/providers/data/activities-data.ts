@@ -50,7 +50,7 @@ export class DataProvider {
         text: "Do you have the winter blues? Bust your cabin-fever by having a little fun with snow. Create some wintry crafts and make some goodies that incorporate that fluffy white stuff we all love this time of year.",
         content: {
           title: "Snow craft",
-          img: "img/unknown.JPG",
+          img: "img/no_image.jpeg",
           age: "age range",
           des: "GOAL: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
           instructions: "Instruction> Lorem ipsum dolor sit amet, ad ius velit homero, nonumy aliquam eam ad, cu ius iusto saepe oratio. Ad mel audiam dolorem dolores, vim ex quas ferri assueverit, at sit agam atqui graece. Eu quando atomorum assueverit nam, usu malorum assentior at. Similique deterruisset ne mea, no possim vocent audiam pro. Nec id purto dissentias cotidieque.",
@@ -65,7 +65,7 @@ export class DataProvider {
         text: "Find out the collection of simple DIY camping hacks extremely useful in making your outdoors experience less expensive and more enjoyable. Try them and watch your fellow campers turn green with envy.",
         content: {
           title: "DIY Camping Hacks",
-          img: "img/unknown.JPG",
+          img: "img/no_image.jpeg",
           age: "age range",
           des: "GOAL: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
           instructions: "Instruction> Lorem ipsum dolor sit amet, ad ius velit homero, nonumy aliquam eam ad, cu ius iusto saepe oratio. Ad mel audiam dolorem dolores, vim ex quas ferri assueverit, at sit agam atqui graece. Eu quando atomorum assueverit nam, usu malorum assentior at. Similique deterruisset ne mea, no possim vocent audiam pro. Nec id purto dissentias cotidieque.",
@@ -80,7 +80,7 @@ export class DataProvider {
         text: "A hit of the neighborhood, turn the backyard into your very own bowling alley with our recycled bottle bowling craft! With a little paint and some rescued bottles, you’ll soon have an easy DIY game everyone in the family will love.",
         content: {
           title: "Bowling time",
-          img: "img/unknown.JPG",
+          img: "img/no_image.jpeg",
           age: "age range",
           des: "GOAL: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
           instructions: "Instruction> Lorem ipsum dolor sit amet, ad ius velit homero, nonumy aliquam eam ad, cu ius iusto saepe oratio. Ad mel audiam dolorem dolores, vim ex quas ferri assueverit, at sit agam atqui graece. Eu quando atomorum assueverit nam, usu malorum assentior at. Similique deterruisset ne mea, no possim vocent audiam pro. Nec id purto dissentias cotidieque.",
@@ -95,7 +95,7 @@ export class DataProvider {
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         content: {
           title: "Lorem Ipsum",
-          img: "img/unknown.JPG",
+          img: "img/no_image.jpeg",
           age: "age range",
           des: "GOAL: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
           instructions: "Instruction> Lorem ipsum dolor sit amet, ad ius velit homero, nonumy aliquam eam ad, cu ius iusto saepe oratio. Ad mel audiam dolorem dolores, vim ex quas ferri assueverit, at sit agam atqui graece. Eu quando atomorum assueverit nam, usu malorum assentior at. Similique deterruisset ne mea, no possim vocent audiam pro. Nec id purto dissentias cotidieque.",
@@ -108,11 +108,11 @@ export class DataProvider {
 
   }
 
-  //loadAll() method which simply returns this activities array variable as promise.
+  // loadAll() method which simply returns this activities array variable as promise.
   loadAll() {
     return Promise.resolve(this.activities);
   };
-  //return the matching id’s object as promise.
+  // return the matching id’s object as promise.
   getByID(id) {
     for (var i = 0; i < (this.activities).length; i++) {
       if (this.activities[i].id == id) {
@@ -120,7 +120,7 @@ export class DataProvider {
       }
     }
   };
-
+  // filter search results by keyword.
   filterItems(searchTerm) {
 
     return this.activities.filter((activity) => {
