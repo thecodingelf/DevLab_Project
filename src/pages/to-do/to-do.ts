@@ -9,12 +9,37 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ToDoPage {
 
   todos: any;
+  slides: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
     this.todos = [
       {
         id: 1,
+        activity: 'Play ladder golf',
+      },
+      {
+        id: 2,
+        activity: 'Do bowling in backyard',
+      },
+      {
+        id: 3,
+        activity: 'Do crafting together',
+      },
+      {
+        id: 4,
+        activity: 'Experiment with life hacks',
+      },
+      {
+        id: 5,
+        activity: 'Play football',
+      },
+    ];
+
+    this.slides = [
+      {
+        id: 1,
+        title: 'Outdoors',
         activity: 'Play ladder golf',
       },
       {

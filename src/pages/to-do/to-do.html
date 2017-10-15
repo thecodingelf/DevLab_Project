@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="secondary">
     <ion-title>
       Activities To-Do
     </ion-title>
@@ -8,7 +8,23 @@
 
 <ion-content>
 
-  <ion-list>
+    <ion-slides pager>
+        <ion-slide *ngFor="let slide of slides">
+            <ion-list>
+                <ion-list-header>
+                  {{slide.title}}
+                </ion-list-header>
+            
+                <ion-item>
+                  <ion-label>{{slide.activity}}</ion-label>
+                  <ion-checkbox color="secondary" checked="false"></ion-checkbox>
+                </ion-item>
+            
+              </ion-list>
+        </ion-slide>
+      </ion-slides>
+
+<!--   <ion-list>
     <ion-list-header>
       Activities
     </ion-list-header>
@@ -18,9 +34,9 @@
       <ion-checkbox color="secondary" checked="false"></ion-checkbox>
     </ion-item>
 
-  </ion-list>
+  </ion-list> -->
 
-  <button ion-button item-end icon-right end>
+  <button ion-button item-end icon-right end full>
     Add new activity
     <ion-icon name="add-circle"></ion-icon>
   </button>
